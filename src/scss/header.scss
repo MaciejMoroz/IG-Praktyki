@@ -1,0 +1,90 @@
+.header {
+  z-index: 100;
+  width: 100%;
+  height: 10 * $space;
+  padding-top: $space;
+  position: absolute;
+  overflow: hidden;
+
+  @include max-media($bpoint-desk) {
+    body.open-menu & {
+      z-index: 9999999;
+      background-color: rgba(112, 112, 112, 0.9);
+      height: 100vh;
+      position: absolute;
+
+      li {
+        display: block;
+      }
+    }
+  }
+}
+
+.hdr-nav {
+  text-align: center;
+  font-size: $font-size-h5;
+  padding-top: $space * 4;
+  padding-bottom: $space;
+  color: $color-2;
+  font-weight: $fw-normal;
+  text-transform: uppercase;
+
+  li {
+    padding: $space * 0.5;
+    display: none;
+    transition: all 0.5s;
+    &:hover {
+      color: $color-1;
+      background-color: rgba(242, 242, 242, 0.5);
+    }
+  }
+
+  @media (min-width: $bpoint-desk) {
+    position: absolute;
+    padding-top: 0px;
+    left: $space * 7;
+    font-size: $font-size-h5;
+    .line {
+      border-left: 1px solid rgba(255, 255, 255, 0.5);
+    }
+    li {
+      padding: $space * 0.5 $space;
+      display: inline-block;
+
+      a {
+        display: block;
+        cursor: pointer;
+      }
+    }
+    .hide-hdr {
+      display: none;
+      position: absolute;
+    }
+  }
+}
+
+.hdr-logo {
+  position: absolute;
+  left: 8%;
+  cursor: pointer;
+}
+
+.hdr-menu {
+  position: absolute;
+  top: 0;
+  right: $space;
+  width: $space;
+  height: $space;
+  cursor: pointer;
+  @media (min-width: $bpoint-desk) {
+    display: none;
+  }
+  span {
+    display: block;
+    background-color: $white;
+    width: $space * 0.75;
+    height: $space * 0.125;
+    margin: $space * 0.125;
+    box-shadow: 0 1px 2px 0 rgba($black, 0.3);
+  }
+}

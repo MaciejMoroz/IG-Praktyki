@@ -1,0 +1,21 @@
+.mission {
+  margin-top: $space * 3;
+  text-align: center;
+  p {
+    text-align: left;
+    font-size: $font-size-h4;
+  }
+
+  &-cont {
+    display: flex;
+
+    span,
+    p {
+      flex-direction: row;
+      padding: 0, $space/2;
+    }
+    span {
+      font-size: $space * 2;
+    }
+  }
+}

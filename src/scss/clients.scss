@@ -1,0 +1,203 @@
+.clients {
+  // margin: $space * 2;
+  padding: $base-unit * 2;
+  overflow: hidden;
+  background: url(../img/trianglify.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  left: 0;
+  right: 0;
+  color: $color-1;
+  text-align: center;
+
+  &-cont {
+    margin: $space * 2;
+    display: flex;
+    .slider-cont {
+      width: 100%;
+    }
+    span {
+      padding-left: $space/2;
+      padding-right: $space;
+      font-size: $space * 2;
+    }
+  }
+}
+
+//slider
+.slider {
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+}
+
+/* kontener dla wszystkich slajdów */
+.slider-slides-cnt {
+  height: $base-unit * 25;
+  width: 100%;
+  position: relative;
+}
+
+/* pojedynczy slide */
+.slider-slide {
+  position: absolute;
+
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: $base-unit * 12;
+
+  opacity: 0;
+  z-index: 0;
+}
+/* slide aktywny */
+.slider-slide-active {
+  z-index: 1;
+}
+
+.slider .element-text {
+  color: $color-1;
+  position: relative;
+  left: -3 * $base-unit;
+  opacity: 0;
+  text-align: center;
+  max-width: 100%;
+  p {
+    text-align: left;
+    font-size: $font-size-h3;
+  }
+  .slide-footer {
+    font-size: $font-size-h4;
+    text-align: left;
+    a {
+      color: $white;
+      cursor: pointer;
+    }
+  }
+}
+.boxes-slider {
+  text-align: left;
+  span {
+    padding: 2px;
+    font-size: $font-size-h5;
+    background-color: $white;
+  }
+}
+
+/* animacja slajdów */
+.slider-slide {
+  opacity: 0;
+  transition: 0.4s all;
+}
+.slider .element-title {
+  left: -3 * $base-unit;
+  opacity: 0;
+  transition: 1s left, 1s opacity;
+}
+.slider .element-text {
+  left: -3 * $base-unit;
+  opacity: 0;
+  transition: 1s 1s left, 1s 1s opacity;
+}
+
+/* aktywny slide zmienia właściwości elementów */
+.slider-slide-active {
+  opacity: 1;
+}
+.slider-slide-active .element-title {
+  left: 0;
+  opacity: 1;
+}
+.slider-slide-active .element-text {
+  left: 0;
+  opacity: 1;
+}
+
+/* przyciski strzałek slajdu */
+.slider-button-prev,
+.slider-button-next {
+  cursor: pointer;
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4 * $base-unit;
+  //   height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  border: 0;
+  text-indent: -999px;
+  overflow: hidden;
+}
+.slider-button-next {
+  left: auto;
+  right: 0;
+}
+.slider-button-prev:focus,
+.slider-button-next:focus {
+  outline: none;
+}
+.slider-button-prev:before,
+.slider-button-next:before {
+  content: "<";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: $white;
+  text-indent: 0;
+}
+.slider-button-next:before {
+  content: ">";
+}
+
+/* slider dots */
+.slider-dots {
+  z-index: 2;
+  position: absolute;
+  left: $space * 2;
+  bottom: $base-unit;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  //   justify-content: center;
+  //   list-style: none;
+  text-align: left;
+}
+.slider-dots-element {
+}
+.slider-dots-button {
+  background: transparent;
+  width: 2 * $base-unit;
+  height: 2 * $base-unit;
+  border: 0;
+  text-indent: -999px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+.slider-dots-button:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: transparent;
+  width: 0.9 * $base-unit;
+  height: 0.9 * $base-unit;
+  border-radius: 50%;
+  transition: 0.5s all;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+.slider-dots-element-active .slider-dots-button:before {
+  background: #fff;
+  transform: translate(-50%, -50%) scale(1.2);
+}
+.slider-dots-button:focus {
+  outline: none;
+}

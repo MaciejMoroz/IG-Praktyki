@@ -1,0 +1,17 @@
+
+@mixin min-width($bpoint){
+    @media (min-width: $bpoint-tab){
+        @content;
+    }
+}
+
+@mixin min-media($bpoint){
+    @media (min-width: $bpoint -1 ) {
+        @content;
+    }
+}
+@mixin max-media($bpoint){
+    @media (max-width: $bpoint - 1) {
+        @content;
+    }
+}
