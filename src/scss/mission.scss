@@ -1,9 +1,15 @@
 .mission {
-  margin-top: $space * 3;
+  // margin-top: $space;
   text-align: center;
+  @media (max-width: $bpoint-tab) {
+    margin-top: -$space;
+  }
   p {
     text-align: left;
     font-size: $font-size-h4;
+    @media (min-width: $bpoint-tab) {
+      font-size: $font-size-h3;
+    }
   }
 
   &-cont {
@@ -15,7 +21,7 @@
       padding: 0, $space/2;
     }
     span {
-      font-size: $space * 2;
+      font-size: $font-size-base * 3.1;
     }
   }
 }

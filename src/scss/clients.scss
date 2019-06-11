@@ -1,6 +1,4 @@
 .clients {
-  // margin: $space * 2;
-  padding: $base-unit * 2;
   overflow: hidden;
   background: url(../img/trianglify.png);
   background-repeat: no-repeat;
@@ -11,9 +9,25 @@
   color: $color-1;
   text-align: center;
 
+  &-hdr {
+    margin-top: $space;
+    @media (min-width: $bpoint-desk) {
+      margin-top: $space * 5;
+      margin-bottom: $base-unit * 3;
+      margin-left: $space * 7;
+    }
+  }
+
   &-cont {
-    margin: $space * 2;
+    padding: 10px;
     display: flex;
+    @media (min-width: $bpoint-desk) {
+      margin-top: 0;
+      margin-bottom: $base-unit * 3;
+      margin-left: 30%; // do poprawy
+      margin-right: 25%; // do poprawy
+    }
+
     .slider-cont {
       width: 100%;
     }
@@ -23,6 +37,9 @@
       font-size: $space * 2;
     }
   }
+}
+.slider-img {
+  height: 388px;
 }
 
 //slider
@@ -123,7 +140,7 @@
   left: 0;
   top: 0;
   width: 4 * $base-unit;
-  //   height: 100%;
+  height: 100%;
   background: rgba(0, 0, 0, 0.1);
   border: 0;
   text-indent: -999px;
@@ -158,19 +175,20 @@
 /* slider dots */
 .slider-dots {
   z-index: 2;
-  position: absolute;
-  left: $space * 2;
-  bottom: $base-unit;
+  position: relative;
+  bottom: $space * 3;
   margin: 0;
   padding: 0;
   width: 100%;
   display: flex;
-  //   justify-content: center;
-  //   list-style: none;
-  text-align: left;
+  justify-content: center;
+  list-style: none;
+  @media (min-width: $bpoint-desk) {
+    bottom: $space * 3.5;
+    margin-left: -$space * 3;
+  }
 }
-.slider-dots-element {
-}
+
 .slider-dots-button {
   background: transparent;
   width: 2 * $base-unit;
