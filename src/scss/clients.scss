@@ -19,13 +19,19 @@
   }
 
   &-cont {
-    padding: 10px;
+    padding: $space;
     display: flex;
     @media (min-width: $bpoint-desk) {
       margin-top: 0;
       margin-bottom: $base-unit * 3;
-      margin-left: 30%; // do poprawy
-      margin-right: 25%; // do poprawy
+      margin-left: $space * 3; // do poprawy
+      margin-right: $space * 2; // do poprawy
+    }
+    @media (min-width: $bpoint-desklg) {
+      margin-top: 0;
+      margin-bottom: $base-unit * 3;
+      margin-left: $space * 10; // do poprawy
+      margin-right: $space * 10; // do poprawy
     }
 
     .slider-cont {
@@ -82,7 +88,7 @@
   max-width: 100%;
   p {
     text-align: left;
-    font-size: $font-size-h3;
+    font-size: $font-size-h4;
   }
   .slide-footer {
     font-size: $font-size-h4;

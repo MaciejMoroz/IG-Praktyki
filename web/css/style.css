@@ -312,7 +312,7 @@ button {
       margin-top: -40px; } }
   .mission p {
     text-align: left;
-    font-size: 22px; }
+    font-size: 14px; }
     @media (min-width: 768px) {
       .mission p {
         font-size: 30px; } }
@@ -348,7 +348,7 @@ button {
         margin-bottom: 60px;
         margin-left: 280px; } }
   .clients-cont {
-    padding: 10px;
+    padding: 40px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
@@ -356,8 +356,14 @@ button {
       .clients-cont {
         margin-top: 0;
         margin-bottom: 60px;
-        margin-left: 30%;
-        margin-right: 25%; } }
+        margin-left: 120px;
+        margin-right: 80px; } }
+    @media (min-width: 1600px) {
+      .clients-cont {
+        margin-top: 0;
+        margin-bottom: 60px;
+        margin-left: 400px;
+        margin-right: 400px; } }
     .clients-cont .slider-cont {
       width: 100%; }
     .clients-cont span {
@@ -402,7 +408,7 @@ button {
   max-width: 100%; }
   .slider .element-text p {
     text-align: left;
-    font-size: 30px; }
+    font-size: 22px; }
   .slider .element-text .slide-footer {
     font-size: 22px;
     text-align: left; }
@@ -547,20 +553,16 @@ button {
 .slider-dots-button:focus {
   outline: none; }
 
-.products-content {
-  text-align: center; }
-
 .products {
-  margin-left: -40px;
-  margin-right: -40px; }
-  @media (min-width: 380px) {
+  margin-left: 40px;
+  margin-right: 40px; }
+  @media (min-width: 1024px) {
     .products {
       margin-left: 0;
       margin-right: 0; } }
-  @media (min-width: 768px) {
-    .products {
-      margin-left: 40px;
-      margin-right: 40px; } }
+
+.products-content {
+  text-align: center; }
 
 .dropdown-group {
   display: -webkit-box;
@@ -572,10 +574,13 @@ button {
       -ms-flex-pack: center;
           justify-content: center; }
 
+.dropdown {
+  margin-bottom: 40px; }
+
 .dropbtn {
-  padding: 20px;
-  height: 100%;
-  width: 150px; }
+  padding: 10px;
+  height: auto;
+  width: 300px; }
   @media (min-width: 1024px) {
     .dropbtn {
       padding: 40px;
@@ -591,11 +596,16 @@ button {
   display: none;
   position: absolute;
   background-color: #62bf17;
-  min-width: 150px;
   width: 100%;
   z-index: 1;
   color: #fff;
-  padding: 0 20px; }
+  padding: 0 10px;
+  text-align: center; }
+  .dropdown-content p {
+    font-size: 14px; }
+  @media (min-width: 768px) {
+    .dropdown-content {
+      padding: 0 20px; } }
 
 .dropdown-content:hover {
   display: block; }
@@ -606,5 +616,20 @@ button {
 .dropdown:hover .dropbtn {
   background-color: #62bf17; }
 
-.map {
-  margin-top: 500px; }
+.map-content {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1f1;
+  width: 100%;
+  height: 100vh; }
+
+.addres {
+  bottom: 40px; }
+
+.map-box {
+  position: absolute;
+  right: 0;
+  width: 70%;
+  height: 70%;
+  background-color: #f1f1f1; }
