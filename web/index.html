@@ -341,16 +341,97 @@
 <sectiom class="component map">
   <div class="map-contener">
     <div class="map-content">
-      <div class="addres">
-        <span>Infinity Group Sp. z o.o.</span>
-        <span>ul. Skladowa 12,</span>
-        <span>15-399 Bialystok, Polska</span>
+      <div class="map-text"></div>
+      <span class="hide-mob"
+        ><img src="../../img/Forma 1.png" alt="" class="compas"
+      /></span>
+      <div>
+        <address class="addres ">
+          Infinity&nbspGroup&nbspSp.&nbspz&nbspo.o.<br />
+          ul.&nbspSkladowa&nbsp12,<br />
+          15-399&nbspBialystok,<br />Polska
+        </address>
+        <div class="addres">
+          <p>
+            Lorem ipsum dolor sit amet,<br />
+            consectetur adipiscing elit
+          </p>
+        </div>
       </div>
-      <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p></div>
     </div>
-    <div class="map-box" id="map"></div>
+    <div class="" id="map"></div>
+    <!-- </div> -->
   </div>
 </sectiom>
+<div class="component contact">
+  <div class="wrapper">
+    <div class="contact-hdr">
+      <h2>Contact</h2>
+      <button class="btn btn--animated">Let us know how to contact You</button>
+    </div>
+    <div class="contact-content">
+        <p>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
+            illo inventore veritatis et quasi architecto beatae vitae.
+          </p>
+
+    </div>
+    <div class="contact-form">
+      <form action="">
+        <label for="firstName">Hello! I'm</label>
+        <input
+          class="input-contact"
+          type="text"
+          id="firstName"
+          name="firstName"
+          placeholder="Your name"
+        />
+        <label for="companyName">and I represent</label>
+        <input
+          class="input-contact"
+          type="text"
+          id="companyName"
+          name="companyName"
+          placeholder="company name"
+        />
+        <label for="userTelephone">Call me at</label>
+        <input
+          class="input-contact"
+          type="tel"
+          id="userTelephone"
+          name="userTelephone"
+          placeholder="Your telephone number"
+        />
+        <label for="email">or send an email to</label>
+        <input
+          class="input-contact"
+          type="tel"
+          id="email"
+          name="email"
+          placeholder="Your email adress"
+        />
+        <div class="checkbox-contact checkbox">
+          <input
+            type="checkbox"
+            id="contact-checkbox"
+            name="contact-checkbox"
+            value="Apple"
+          />
+          <label for="contact-checkbox"
+            >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor
+          </label>
+        </div>
+        <div class="submit-btn">
+          <button class="btn btn--animated btn-submit" type="submit">
+            send details <span>&#8594</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
 
 
     <script src="js/app.js" type="text/javascript"></script>
@@ -358,7 +439,7 @@
     <script src="js/map.js" type="text/javascript"></script>
 
     <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlz-0rvHNVQ13YizGQSEUUQa3igN6qt4E&callback=initMap"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlz-0rvHNVQ13YizGQSEUUQa3igN6qt4E&language=pl&region=PL&callback=initMap"
       async
       defer
     ></script>

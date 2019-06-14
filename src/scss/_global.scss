@@ -1,7 +1,7 @@
 html {
   font-size: 20px;
   font-family: $font-1;
-  @media (max-width: $bpoint-mob - 1) {
+  @media (max-width: $bpoint-mob) {
     font-size: 12px;
   }
   @media (min-width: $bpoint-desklg) {
@@ -64,6 +64,56 @@ p {
   font-size: $font-size-body;
   margin: 0.5 * $space 0;
 }
+input {
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+input[type="checkbox"] + label {
+  display: block;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label:before {
+  content: "\2714";
+  font-size: 20px;
+  border: 1px solid $color-6;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  padding-left: 2px;
+  padding-bottom: 22px;
+  margin-right: 12px;
+  vertical-align: middle;
+  color: transparent;
+  transition: 0.2s;
+}
+
+input[type="checkbox"] + label:active:before {
+  transform: scale(0);
+}
+
+input[type="checkbox"]:checked + label:before {
+  background-color: $color-4;
+  border-color: $color-4;
+  color: #fff;
+}
+
+input[type="checkbox"]:disabled + label:before {
+  transform: scale(1);
+  border-color: #aaaaaa;
+}
+
+input[type="checkbox"]:checked:disabled + label:before {
+  transform: scale(1);
+  background-color: #bfb;
+  border-color: #bfb;
+}
 
 button {
   border: none;
@@ -72,32 +122,51 @@ button {
 }
 
 .btn {
-  border: 1px solid $color-8;
-  border-radius: 4px 4px 4px 4px;
-  color: $color-4;
-  background-color: $color-1;
-  font-size: $font-size-h5;
-  font-weight: $fw-bold;
-  padding: 0.5 * $space $space;
-  transition: all 0.3s;
-  &:hover {
-    color: $white;
-    background-color: $color-4;
+  position: relative;
+  display: inline-block;
+  padding: 8px 15px;
+  text-align: center;
+  overflow: hidden;
+  z-index: 1;
+  background-color: $color-4;
+  border: 1px solid $color-7;
+  color: $color-2;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
   }
 }
 
-.btn-w {
-  border: 1px solid $color-4;
-  border-radius: 4px 4px 4px 4px;
-  color: $color-4;
-  background-color: $color-1;
-  font-size: $font-size-h5;
-  font-weight: $fw-bold;
-  padding: 0.5 * $space $space;
-  transition: all 0.3s;
+.btn--animated {
+  transition-property: color;
+  transition-duration: 0.5s;
+
+  &.btn--border.btn--primary {
+    border: 1px solid #707070;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #707070;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+    z-index: -1;
+  }
+
   &:hover {
-    color: $white;
-    background-color: $color-4;
+    &:before {
+      transform: scaleX(1);
+      transition-timing-function: cubic-bezier(0.45, 1.64, 0.47, 0.66);
+    }
   }
 }
 

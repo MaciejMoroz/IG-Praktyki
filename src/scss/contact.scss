@@ -1,0 +1,54 @@
+.contact-hdr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  button {
+    height: 34px;
+  }
+
+  @media (min-width: $bpoint-tab) {
+    p {
+      padding: 0 $space * 2;
+      padding-right: 0;
+    }
+  }
+}
+.contact-content {
+  @media (min-width: $bpoint-tab) {
+    p {
+      padding: 0 $space * 2;
+      padding-right: 0;
+    }
+  }
+}
+
+.contact-form {
+  @media (min-width: $bpoint-tab) {
+    padding: 0 $space * 2;
+    padding-right: 0;
+    label {
+      font-size: $font-size-h3;
+    }
+  }
+}
+
+.input-contact {
+  border-bottom: 1px solid black;
+  &::placeholder {
+    font-size: $font-size-h5;
+  }
+}
+
+.checkbox-contact {
+  margin: $space 0;
+  label {
+    font-size: 18px;
+  }
+}
+.submit-btn {
+  text-align: center;
+  span {
+    padding-left: 5px;
+  }
+}

@@ -21,8 +21,8 @@
 }
 
 .dropbtn {
-  padding: $space * 0.25;
-
+  padding: $space;
+  text-align: center;
   height: auto;
   width: 300px;
 
@@ -31,7 +31,10 @@
     width: 220px;
   }
   img {
-    width: 100%;
+    width: 50%;
+    @media (min-width: $bpoint-desk) {
+      width: 100%;
+    }
   }
 }
 
@@ -58,8 +61,36 @@
   }
 }
 
-.dropdown-content:hover {
-  display: block;
+.animation {
+  transition-property: color;
+  transition-duration: 0.5s;
+
+  &.btn--border.btn--primary {
+    border: 1px solid #707070;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #707070;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+    z-index: -1;
+  }
+
+  &:hover {
+    &:before {
+      transform: scaleX(1);
+      transition-timing-function: cubic-bezier(0.45, 1.64, 0.47, 0.66);
+    }
+  }
 }
 
 .dropdown:hover .dropdown-content {

@@ -3,13 +3,10 @@ $color-1: #2d2d2d;
 $color-2: #f2f2f2;
 $color-3: #f1f1f1;
 $color-4: #62bf17;
-$color-5: #767676;
-$color-6: #b7b7b7;
-$color-7: #000000;
-$color-8: #0d70b7;
-$color-9: #707070;
-$color-10: #00a3e2;
-$color-11: #dadada;
+$color-5: #f1f1f1;
+$color-6: #d5d5d5;
+$color-7: #707070;
+//
 
 $white: #fff;
 $black: #000;
@@ -17,9 +14,9 @@ $color-error: red;
 $color-ok: green;
 
 // FONTS
-$base-unit: 20px; //16px
+$base-unit: 20px;
 $font-1: Arial, Helvetica Neue, Helvetica, sans-serif;
-$font-size-base: $base-unit; //16 px
+$font-size-base: $base-unit; //20 px
 $fw-normal: 400;
 $fw-semi: 600;
 $fw-bold: 700;
@@ -33,6 +30,7 @@ $font-size-h3: $font-size-base * 1.5; //30
 $font-size-h4: $font-size-base * 1.1; // 22
 $font-size-h5: $font-size-base * 0.7; // 14
 $font-size-h6: $font-size-base * 0.5; //10
+$fontsize-label: $font-size-base * 0.9; // 18
 
 // SPACE
 $space: 2 * $base-unit; // 40px
