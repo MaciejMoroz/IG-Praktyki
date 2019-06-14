@@ -3,17 +3,17 @@
   width: 100%;
   height: 10 * $space;
   padding-top: $space;
-  position: absolute;
+  position: fixed;
   overflow: hidden;
+  transition: 0.5s;
 
   @include max-media($bpoint-desk) {
     body.open-menu & {
       z-index: 9999999;
       background-color: rgba(112, 112, 112, 0.9);
       height: 100vh;
-      position: absolute;
-
-      li {
+      position: fixed;
+      span {
         display: block;
       }
     }
@@ -29,7 +29,7 @@
   font-weight: $fw-normal;
   text-transform: uppercase;
 
-  li {
+  span {
     padding: $space * 0.5;
     display: none;
     transition: all 0.5s;
@@ -47,13 +47,13 @@
     .line {
       border-left: 1px solid rgba(255, 255, 255, 0.5);
     }
-    li {
+    span {
+      cursor: pointer;
       padding: $space * 0.5 $space;
       display: inline-block;
 
       a {
         display: block;
-        cursor: pointer;
       }
     }
     .hide-hdr {
@@ -65,8 +65,11 @@
 
 .hdr-logo {
   position: absolute;
-  left: 0;
+  left: $space;
   cursor: pointer;
+  @media (min-width: $bpoint-desk) {
+    left: 0;
+  }
 }
 
 .hdr-menu {
