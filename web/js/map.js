@@ -1,4 +1,3 @@
-// import img from "../img/pin.png";
 
 function initMap() {
   let ig = { lat: 53.1159108, lng: 23.1261896 };

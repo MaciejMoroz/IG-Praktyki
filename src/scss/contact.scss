@@ -3,8 +3,13 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  margin-left: -$space;
+  margin-right: -$space;
   button {
     height: 34px;
+    span {
+      padding-left: 5px;
+    }
   }
 
   @media (min-width: $bpoint-tab) {
@@ -17,7 +22,7 @@
 .contact-content {
   @media (min-width: $bpoint-tab) {
     p {
-      padding: 0 $space * 2;
+      padding: 0 $space;
       padding-right: 0;
     }
   }
@@ -25,7 +30,7 @@
 
 .contact-form {
   @media (min-width: $bpoint-tab) {
-    padding: 0 $space * 2;
+    padding: 0 $space;
     padding-right: 0;
     label {
       font-size: $font-size-h3;
@@ -33,9 +38,13 @@
   }
 }
 
-.input-contact {
+.form-el {
   border-bottom: 1px solid black;
+  font-size: $font-size-h4;
+  width: 240px;
+  padding: 2px 5px;
   &::placeholder {
+    padding: 5px;
     font-size: $font-size-h5;
   }
 }
@@ -50,5 +59,14 @@
   text-align: center;
   span {
     padding-left: 5px;
+  }
+}
+
+.contact-el {
+  display: inline-block;
+  span {
+    margin: 2px 0;
+    text-align: right;
+    font-size: $font-size-h6;
   }
 }

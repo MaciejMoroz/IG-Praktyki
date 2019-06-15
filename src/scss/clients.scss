@@ -101,10 +101,13 @@
 }
 .boxes-slider {
   text-align: left;
+  margin-top: $space;
+  
   span {
-    padding: 2px;
+    padding: 4px 6px;
     font-size: $font-size-h5;
-    background-color: $white;
+    border: 1px solid $white;
+    color: $white;
   }
 }
 

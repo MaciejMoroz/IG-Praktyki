@@ -68,6 +68,15 @@ input {
   border: none;
   background: none;
   padding: 0;
+  &:focus {
+    box-shadow: 0 3px 5px $color-4;
+  }
+  .is-submitted &:invalid {
+    box-shadow: 0 3px 5px $color-error;
+    + .form-error-msg {
+      visibility: visible;
+    }
+  }
 }
 
 input[type="checkbox"] + label {
@@ -77,6 +86,14 @@ input[type="checkbox"] + label {
 
 input[type="checkbox"] {
   display: none;
+  .is-submitted &:invalid {
+    outline: 2px solid $color-error;
+    background-color: rgba($color-error, 0.2);
+    + .form-error-msg {
+      // opacity: 1;
+      visibility: visible;
+    }
+  }
 }
 
 input[type="checkbox"] + label:before {
@@ -113,6 +130,15 @@ input[type="checkbox"]:checked:disabled + label:before {
   transform: scale(1);
   background-color: #bfb;
   border-color: #bfb;
+}
+
+.form-error-msg {
+  display: block;
+  font-weight: $fw-bold;
+  visibility: hidden;
+  position: relative;
+  color: $color-error;
+  font-size: $font-size-body2;
 }
 
 button {

@@ -109,6 +109,14 @@ input {
   border: none;
   background: none;
   padding: 0; }
+  input:focus {
+    -webkit-box-shadow: 0 3px 5px #62bf17;
+            box-shadow: 0 3px 5px #62bf17; }
+  .is-submitted input:invalid {
+    -webkit-box-shadow: 0 3px 5px red;
+            box-shadow: 0 3px 5px red; }
+    .is-submitted input:invalid + .form-error-msg {
+      visibility: visible; }
 
 input[type="checkbox"] + label {
   display: block;
@@ -116,6 +124,11 @@ input[type="checkbox"] + label {
 
 input[type="checkbox"] {
   display: none; }
+  .is-submitted input[type="checkbox"]:invalid {
+    outline: 2px solid red;
+    background-color: rgba(255, 0, 0, 0.2); }
+    .is-submitted input[type="checkbox"]:invalid + .form-error-msg {
+      visibility: visible; }
 
 input[type="checkbox"] + label:before {
   content: "\2714";
@@ -151,6 +164,14 @@ input[type="checkbox"]:checked:disabled + label:before {
           transform: scale(1);
   background-color: #bfb;
   border-color: #bfb; }
+
+.form-error-msg {
+  display: block;
+  font-weight: 700;
+  visibility: hidden;
+  position: relative;
+  color: red;
+  font-size: 15px; }
 
 button {
   border: none;
@@ -241,20 +262,22 @@ button {
 .header {
   z-index: 100;
   width: 100%;
-  height: 400px;
+  height: 100px;
   padding-top: 40px;
   position: fixed;
   overflow: hidden;
   -webkit-transition: 0.5s;
   transition: 0.5s; }
   @media (max-width: 1023px) {
-    body.open-menu .header {
-      z-index: 9999999;
-      background-color: rgba(112, 112, 112, 0.9);
-      height: 100vh;
-      position: fixed; }
-      body.open-menu .header span {
-        display: block; } }
+    .header {
+      height: 80px; }
+      body.open-menu .header {
+        z-index: 9999999;
+        background-color: rgba(112, 112, 112, 0.9);
+        height: 100vh;
+        position: fixed; }
+        body.open-menu .header span {
+          display: block; } }
 
 .hdr-nav {
   text-align: center;
@@ -279,6 +302,7 @@ button {
       left: 280px;
       font-size: 14px; }
       .hdr-nav .line {
+        margin: -2px;
         border-left: 1px solid rgba(255, 255, 255, 0.5); }
       .hdr-nav span {
         cursor: pointer;
@@ -489,11 +513,13 @@ button {
       cursor: pointer; }
 
 .boxes-slider {
-  text-align: left; }
+  text-align: left;
+  margin-top: 40px; }
   .boxes-slider span {
-    padding: 2px;
+    padding: 4px 6px;
     font-size: 14px;
-    background-color: #fff; }
+    border: 1px solid #fff;
+    color: #fff; }
 
 /* animacja slajdów */
 .slider-slide {
@@ -768,7 +794,6 @@ button {
   @media (min-width: 1024px) {
     #map {
       top: 0;
-      width: 80%;
       height: 100%;
       float: right; } }
 
@@ -783,9 +808,13 @@ button {
       -ms-flex-align: center;
           align-items: center;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
+      flex-wrap: wrap;
+  margin-left: -40px;
+  margin-right: -40px; }
   .contact-hdr button {
     height: 34px; }
+    .contact-hdr button span {
+      padding-left: 5px; }
   @media (min-width: 768px) {
     .contact-hdr p {
       padding: 0 80px;
@@ -793,25 +822,32 @@ button {
 
 @media (min-width: 768px) {
   .contact-content p {
-    padding: 0 80px;
+    padding: 0 40px;
     padding-right: 0; } }
 
 @media (min-width: 768px) {
   .contact-form {
-    padding: 0 80px;
+    padding: 0 40px;
     padding-right: 0; }
     .contact-form label {
       font-size: 30px; } }
 
-.input-contact {
-  border-bottom: 1px solid black; }
-  .input-contact::-webkit-input-placeholder {
+.form-el {
+  border-bottom: 1px solid black;
+  font-size: 22px;
+  width: 240px;
+  padding: 2px 5px; }
+  .form-el::-webkit-input-placeholder {
+    padding: 5px;
     font-size: 14px; }
-  .input-contact::-moz-placeholder {
+  .form-el::-moz-placeholder {
+    padding: 5px;
     font-size: 14px; }
-  .input-contact::-ms-input-placeholder {
+  .form-el::-ms-input-placeholder {
+    padding: 5px;
     font-size: 14px; }
-  .input-contact::placeholder {
+  .form-el::placeholder {
+    padding: 5px;
     font-size: 14px; }
 
 .checkbox-contact {
@@ -823,6 +859,13 @@ button {
   text-align: center; }
   .submit-btn span {
     padding-left: 5px; }
+
+.contact-el {
+  display: inline-block; }
+  .contact-el span {
+    margin: 2px 0;
+    text-align: right;
+    font-size: 10px; }
 
 .footer {
   padding: 40px;
