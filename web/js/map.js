@@ -1,4 +1,3 @@
-
 function initMap() {
   let ig = { lat: 53.1159108, lng: 23.1261896 };
   let pinImg = "../img/pin.png";

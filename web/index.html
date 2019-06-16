@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="pl">
+  <head>
+    <title>Ig Praktyki</title>
+    <meta name="description" content="Ig PRaktyki" />
+    <meta name="keywords" content="HTML,SCSS,JavaScript" />
+    <meta name="author" content="Maciej Moroz" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-<head>
-  <title>Ig Praktyki</title>
-  <meta name="description" content="Ig PRaktyki">
-  <meta name="keywords" content="HTML,SCSS,JavaScript">
-  <meta name="author" content="Maciej Moroz">
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title></title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-  <title></title>
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-
-<body>
-  <header id="nav" class="header">
+  <body>
+    <header id="nav" class="header">
   <div class="wrapper">
     <a href="#">
       <div class="hdr-logo">
@@ -24,13 +26,13 @@
     </a>
 
     <div class="hdr-nav">
-      <a href="#mission"> <span>Mission</span></a>
+      <a href="#nav-mission"> <span>Mission</span></a>
 
-      <a href="#clients"><span class="line">clients</span></a>
+      <a href="#nav-clients"><span class="line">clients</span></a>
 
-      <a href="#products"><span class="line">products</span></a>
+      <a href="#nav-products"><span class="line">products</span></a>
 
-      <a href="#contact"><span class="line">contact</span></a>
+      <a href="#nav-contact"><span class="line">contact</span></a>
     </div>
     <div class="hdr-menu" data-menu-btn>
       <span></span>
@@ -38,7 +40,8 @@
       <span></span>
     </div>
   </div>
-</header> <section class="component hero">
+</header>
+ <section class="component hero">
   <div class="wrapper">
     <div class="hero-img"></div>
     <div class="hero-cont">
@@ -50,25 +53,27 @@
   </div>
 </section>
 
-  <section id="mission" class="component mission">
+    <div id="nav-mission" class="nav-anchor"></div>
+
+<section id="mission" class="component mission">
   <div class="wrapper">
     <h2>Mission</h2>
-          <div class="mission-cont">
-        <span class="hide-mob">"</span>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum...
-        </p>
-      </div>
+    <div class="mission-cont">
+      <span class="hide-mob">"</span>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum...
+      </p>
     </div>
   </div>
 </section>
- <section id="clients" class="component clients">
+ <div id="nav-clients"></div>
+<section id="clients" class="component clients">
   <div class="wrapaper">
     <h2 class="white clients-hdr">Clients</h2>
 
@@ -136,7 +141,8 @@
       </div>
     </div>
   </div>
-</section><section id="products" class=" component products">
+</section><div id="nav-products" class="nav-anchor"></div>
+<section id="products" class=" component products">
   <div class="wrapper">
     <div class="products-content">
       <h2>Products</h2>
@@ -338,7 +344,9 @@
   <div class="map-contener">
     <div class="map-content">
       <div class="map-text"></div>
-      <span class="hide-mob"><img src="../../img/Forma 1.png" alt="compas-icon" class="compas" /></span>
+      <span class="hide-mob"
+        ><img src="../../img/Forma 1.png" alt="compas-icon" class="compas"
+      /></span>
       <div>
         <address class="addres ">
           Infinity&nbspGroup&nbspSp.&nbspz&nbspo.o.<br />
@@ -355,7 +363,10 @@
     </div>
     <div class="" id="map"></div>
   </div>
-</sectiom><div id="contact" class="component contact">
+</sectiom>
+<div id="nav-contact" class="nav-anchor"></div>
+
+<div id="contact" class="component contact">
   <div class="wrapper">
     <div class="contact-hdr">
       <h2>Contact</h2>
@@ -409,11 +420,16 @@
         <!-- phone -->
         <div class="contact-el">
           <label for="userTelephone">Call&nbspme at</label>
-          <input class="form-el" type="tel" id="userTelephone"
-          name="userTelephone" placeholder="Your telephone number" required
+          <input class="form-el" 
+          type="tel" 
+          id="userTelephone"
+          name="userTelephone" 
+          placeholder="Your telephone number" 
+          required
+          minlength=9
           pattern=^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$ />
           <span class="form-error-msg"
-            >Błędny numer, pole musi zawierac conajmniej 6 znaków</span
+            >Błędny numer, pole musi zawierac conajmniej 9 liczb</span
           >
         </div>
         <!-- email -->
@@ -425,6 +441,7 @@
             id="email"
             name="email"
             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+         
             placeholder="Your email adress"
             required
           />
@@ -462,15 +479,30 @@
     </div>
   </div>
 </footer>
+<div id="cookie-bar" class="component cookies">
+  <div class="cookies-cnt">
+    <div class="wrapper">
+      <img src="../../img//cookie.png" alt="cookie-logo" class="cooki-logo" />
+      <p>
+        We use own and third party cookies to improve our services and show ads
+        related to your preferences by analyzing your browser habits . If you
+        continue browsing , we consider you accept its use. You can switch the
+        configuration or learn more <a href="#" class="cookie-policy">here</a>
+      </p>
+      <button class="btn btn--animated" id="btn_cookie">CLOSE</button>
+    </div>
+  </div>
+</div>
 
 
-  <script src="js/app.js" type="text/javascript"></script>
-  <script src="js/slider.js" type="text/javascript"></script>
-  <script src="js/map.js" type="text/javascript"></script>
+    <script src="js/app.js" type="text/javascript"></script>
+    <script src="js/slider.js" type="text/javascript"></script>
+    <script src="js/map.js" type="text/javascript"></script>
 
-  <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlz-0rvHNVQ13YizGQSEUUQa3igN6qt4E&language=pl&region=PL&callback=initMap"
-    async defer></script>
-</body>
-
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlz-0rvHNVQ13YizGQSEUUQa3igN6qt4E&language=pl&region=PL&callback=initMap"
+      async
+      defer
+    ></script>
+  </body>
 </html>

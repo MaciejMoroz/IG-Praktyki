@@ -47,6 +47,7 @@ table {
   border-spacing: 0; }
 
 html {
+  scroll-behavior: smooth;
   font-size: 20px;
   font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
   -webkit-box-sizing: border-box;
@@ -259,6 +260,10 @@ button {
 .white {
   color: #f2f2f2; }
 
+.nav-anchor {
+  padding-top: 50px;
+  margin-top: -50px; }
+
 .header {
   z-index: 100;
   width: 100%;
@@ -315,6 +320,7 @@ button {
         position: absolute; } }
 
 .hdr-logo {
+  padding-top: 10px;
   position: absolute;
   left: 40px;
   cursor: pointer; }
@@ -415,15 +421,13 @@ button {
   .mission-cont {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; }
-    .mission-cont span,
-    .mission-cont p {
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: row;
-              flex-direction: row;
-      padding: 0, 20px; }
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
     .mission-cont span {
+      padding: 0 20px 0 0;
       font-size: 62px; }
 
 .clients {
@@ -794,6 +798,7 @@ button {
   @media (min-width: 1024px) {
     #map {
       top: 0;
+      width: 80%;
       height: 100%;
       float: right; } }
 
@@ -808,17 +813,18 @@ button {
       -ms-flex-align: center;
           align-items: center;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-left: -40px;
-  margin-right: -40px; }
+      flex-wrap: wrap; }
   .contact-hdr button {
     height: 34px; }
     .contact-hdr button span {
       padding-left: 5px; }
   @media (min-width: 768px) {
-    .contact-hdr p {
-      padding: 0 80px;
-      padding-right: 0; } }
+    .contact-hdr {
+      margin-left: -40px;
+      margin-right: -40px; }
+      .contact-hdr p {
+        padding: 0 80px;
+        padding-right: 0; } }
 
 @media (min-width: 768px) {
   .contact-content p {
@@ -873,3 +879,34 @@ button {
   width: 100%;
   margin-bottom: 0;
   background-image: linear-gradient(325deg, #ffae13 0%, #ff6468 22%, #8d4d59 43%, #1b3549 64%, #1b3549 100%); }
+
+.cookies {
+  position: fixed;
+  padding: 0;
+  width: 100%;
+  bottom: -40px; }
+
+.cookies-cnt {
+  color: #fff;
+  background-color: #222222; }
+  .cookies-cnt img {
+    margin: 40px 40px 0 0; }
+    @media (min-width: 1024px) {
+      .cookies-cnt img {
+        margin-left: -40px;
+        float: left;
+        width: 39px;
+        height: 46px; } }
+  .cookies-cnt p {
+    text-align: left;
+    display: inline-block;
+    width: 80%; }
+    @media (min-width: 1024px) {
+      .cookies-cnt p {
+        width: 91%; } }
+  .cookies-cnt button {
+    float: right;
+    margin: 40px 0px; }
+    @media (min-width: 1024px) {
+      .cookies-cnt button {
+        margin: 40px -40px; } }

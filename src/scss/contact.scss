@@ -3,8 +3,7 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  margin-left: -$space;
-  margin-right: -$space;
+
   button {
     height: 34px;
     span {
@@ -13,6 +12,8 @@
   }
 
   @media (min-width: $bpoint-tab) {
+    margin-left: -$space;
+    margin-right: -$space;
     p {
       padding: 0 $space * 2;
       padding-right: 0;

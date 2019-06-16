@@ -14,13 +14,9 @@
 
   &-cont {
     display: flex;
-
-    span,
-    p {
-      flex-direction: row;
-      padding: 0, $space/2;
-    }
+    flex-direction: row;
     span {
+      padding: 0 20px 0 0;
       font-size: $font-size-base * 3.1;
     }
   }

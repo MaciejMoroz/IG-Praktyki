@@ -1,12 +1,15 @@
-const BODY = this.document.querySelector("body");
-const btn_menu = this.document.querySelector("[data-menu-btn]");
-const form_mod = this.document.querySelector(".contact");
-const form_el = form_mod.querySelector("form");
-const form_req = form_mod.querySelectorAll("[required]");
+const BODY = this.document.querySelector("body"),
+  btn_menu = this.document.querySelector("[data-menu-btn]"),
+  form_mod = this.document.querySelector(".contact"),
+  form_el = form_mod.querySelector("form"),
+  form_req = form_mod.querySelectorAll("[required]"),
+  nav = document.getElementById("nav"),
+  cookie_bar = document.getElementById("cookie-bar"),
+  cookie_btn = document
+    .getElementById("btn_cookie")
+    .addEventListener("click", cookieAccepted);
 
 //fixed menu
-let nav = document.getElementById("nav");
-
 window.onscroll = () => {
   if (window.pageYOffset > 100) {
     nav.style.paddingTop = "10px";
@@ -26,16 +29,18 @@ window.onscroll = () => {
 
 // hamburger menu
 btn_menu.onclick = () => {
-  BODY.classList.toggle("open-menu");
-  nav.style.background = "rgba(112, 112, 112, 0.9)";
+  if (BODY.classList != "open-menu") {
+    BODY.classList.toggle("open-menu");
+  }
 
   if (nav.style.height === "100vh") {
     nav.style.height = "60px";
     if (window.pageYOffset < 100) {
       nav.style.background = "transparent";
-      nav.style.height = "60px";
+      nav.style.height = "100px";
     }
   } else {
+    nav.style.background = "rgba(112, 112, 112, 0.9)";
     nav.style.height = "100vh";
   }
 };
@@ -77,3 +82,9 @@ form_el.onsubmit = function(event) {
     console.log("there are some not property validated fields");
   }
 };
+
+// cookie
+function cookieAccepted() {
+  cookie_bar.style.display = "none";
+  console.log("cookie actepted");
+}

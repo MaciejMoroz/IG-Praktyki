@@ -1,0 +1,36 @@
+.cookies {
+  position: fixed;
+  padding: 0;
+  width: 100%;
+  bottom: -$space;
+}
+.cookies-cnt {
+  color: $white;
+  background-color: $color-8;
+
+  img {
+    margin: $space $space 0 0;
+    @media (min-width: $bpoint-desk) {
+      margin-left: -$space;
+      float: left;
+      width: 39px;
+      height: 46px;
+    }
+  }
+  p {
+    text-align: left;
+    display: inline-block;
+    width: 80%;
+    @media (min-width: $bpoint-desk) {
+      width: 91%;
+    }
+  }
+  button {
+    float: right;
+    margin: $space $space -$space;
+
+    @media (min-width: $bpoint-desk) {
+      margin: $space 0 -$space;
+    }
+  }
+}

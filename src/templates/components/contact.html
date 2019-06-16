@@ -1,3 +1,5 @@
+<div id="nav-contact" class="nav-anchor"></div>
+
 <div id="contact" class="component contact">
   <div class="wrapper">
     <div class="contact-hdr">
@@ -52,11 +54,16 @@
         <!-- phone -->
         <div class="contact-el">
           <label for="userTelephone">Call&nbspme at</label>
-          <input class="form-el" type="tel" id="userTelephone"
-          name="userTelephone" placeholder="Your telephone number" required
+          <input class="form-el" 
+          type="tel" 
+          id="userTelephone"
+          name="userTelephone" 
+          placeholder="Your telephone number" 
+          required
+          minlength=9
           pattern=^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$ />
           <span class="form-error-msg"
-            >Błędny numer, pole musi zawierac conajmniej 6 znaków</span
+            >Błędny numer, pole musi zawierac conajmniej 9 liczb</span
           >
         </div>
         <!-- email -->
@@ -68,6 +75,7 @@
             id="email"
             name="email"
             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+         
             placeholder="Your email adress"
             required
           />
