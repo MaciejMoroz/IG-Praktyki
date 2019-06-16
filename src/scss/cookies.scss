@@ -3,34 +3,52 @@
   padding: 0;
   width: 100%;
   bottom: -$space;
+  background-color: $color-8;
 }
 .cookies-cnt {
   color: $white;
-  background-color: $color-8;
+  margin: 10px 15px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  @media (min-width: $bpoint-tab) {
+    flex-direction: row;
+    max-width: $cont-max-width;
+    margin: auto;
+    flex-wrap: nowrap;
+    padding: $base-unit $space;
+  }
 
   img {
-    margin: $space $space 0 0;
-    @media (min-width: $bpoint-desk) {
-      margin-left: -$space;
-      float: left;
-      width: 39px;
-      height: 46px;
+    align-self: flex-start;
+    margin-top: $base-unit;
+    padding-right: 10px;
+    width: 45px;
+    height: 45px;
+    @media (min-width: $bpoint-tab) {
+      margin: 0;
     }
+    // @media (min-width: $bpoint-desk) {
+    //   margin-top: $space;
+    // }
   }
   p {
+    align-self: flex-end;
+    flex-grow: 2;
+    font-size: $font-size-h5;
     text-align: left;
-    display: inline-block;
-    width: 80%;
-    @media (min-width: $bpoint-desk) {
-      width: 91%;
+    width: 60%;
+    @media (min-width: $bpoint-tab) {
+      width: 80%;
+      margin: 0 $space;
     }
   }
-  button {
-    float: right;
-    margin: $space $space -$space;
-
-    @media (min-width: $bpoint-desk) {
-      margin: $space 0 -$space;
+  #btn_cookie {
+    width: 100%;
+    font-size: $font-size-h5;
+    @media (min-width: $bpoint-tab) {
+      width: 81px;
+      height: 30px;
     }
   }
 }

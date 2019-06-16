@@ -8,7 +8,7 @@
   transition: 0.5s;
 
   @include max-media($bpoint-desk) {
-    height: 80px;
+    height: 120px;
     body.open-menu & {
       z-index: 9999999;
       background-color: rgba(112, 112, 112, 0.9);
@@ -77,7 +77,7 @@
 
 .hdr-menu {
   position: absolute;
-  top: 0;
+  top: 10px;
   right: $space;
   width: $space;
   height: $space;

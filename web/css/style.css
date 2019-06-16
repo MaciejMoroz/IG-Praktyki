@@ -275,7 +275,7 @@ button {
   transition: 0.5s; }
   @media (max-width: 1023px) {
     .header {
-      height: 80px; }
+      height: 120px; }
       body.open-menu .header {
         z-index: 9999999;
         background-color: rgba(112, 112, 112, 0.9);
@@ -330,7 +330,7 @@ button {
 
 .hdr-menu {
   position: absolute;
-  top: 0;
+  top: 10px;
   right: 40px;
   width: 40px;
   height: 40px;
@@ -406,6 +406,10 @@ button {
       white-space: nowrap; }
     .hero-cont h1 .black {
       color: #2d2d2d; }
+
+.nav-anchor-mission {
+  padding-top: 100px;
+  margin-top: -50px; }
 
 .mission {
   text-align: center; }
@@ -884,29 +888,59 @@ button {
   position: fixed;
   padding: 0;
   width: 100%;
-  bottom: -40px; }
+  bottom: -40px;
+  background-color: #222222; }
 
 .cookies-cnt {
   color: #fff;
-  background-color: #222222; }
+  margin: 10px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+  @media (min-width: 768px) {
+    .cookies-cnt {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      max-width: 1024px;
+      margin: auto;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+      padding: 20px 40px; } }
   .cookies-cnt img {
-    margin: 40px 40px 0 0; }
-    @media (min-width: 1024px) {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    margin-top: 20px;
+    padding-right: 10px;
+    width: 45px;
+    height: 45px; }
+    @media (min-width: 768px) {
       .cookies-cnt img {
-        margin-left: -40px;
-        float: left;
-        width: 39px;
-        height: 46px; } }
+        margin: 0; } }
   .cookies-cnt p {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    -webkit-box-flex: 2;
+        -ms-flex-positive: 2;
+            flex-grow: 2;
+    font-size: 14px;
     text-align: left;
-    display: inline-block;
-    width: 80%; }
-    @media (min-width: 1024px) {
+    width: 60%; }
+    @media (min-width: 768px) {
       .cookies-cnt p {
-        width: 91%; } }
-  .cookies-cnt button {
-    float: right;
-    margin: 40px 0px; }
-    @media (min-width: 1024px) {
-      .cookies-cnt button {
-        margin: 40px -40px; } }
+        width: 80%;
+        margin: 0 40px; } }
+  .cookies-cnt #btn_cookie {
+    width: 100%;
+    font-size: 14px; }
+    @media (min-width: 768px) {
+      .cookies-cnt #btn_cookie {
+        width: 81px;
+        height: 30px; } }

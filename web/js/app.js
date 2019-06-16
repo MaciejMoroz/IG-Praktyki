@@ -14,7 +14,7 @@ window.onscroll = () => {
   if (window.pageYOffset > 100) {
     nav.style.paddingTop = "10px";
     nav.style.paddingBottom = "10px";
-    nav.style.height = "60px";
+    nav.style.height = "70px";
     if (window.innerWidth > 1024) {
       nav.style.height = "80px";
     }
@@ -34,7 +34,7 @@ btn_menu.onclick = () => {
   }
 
   if (nav.style.height === "100vh") {
-    nav.style.height = "60px";
+    nav.style.height = "70px";
     if (window.pageYOffset < 100) {
       nav.style.background = "transparent";
       nav.style.height = "100px";
