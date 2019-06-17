@@ -1,4 +1,5 @@
 .cookies {
+  z-index: 1;
   position: fixed;
   padding: 0;
   width: 100%;
@@ -12,10 +13,9 @@
   flex-wrap: wrap;
   flex-direction: row;
   @media (min-width: $bpoint-tab) {
-    flex-direction: row;
+    flex-wrap: nowrap;
     max-width: $cont-max-width;
     margin: auto;
-    flex-wrap: nowrap;
     padding: $base-unit $space;
   }
 
@@ -26,11 +26,8 @@
     width: 45px;
     height: 45px;
     @media (min-width: $bpoint-tab) {
-      margin: 0;
+      margin: auto;
     }
-    // @media (min-width: $bpoint-desk) {
-    //   margin-top: $space;
-    // }
   }
   p {
     align-self: flex-end;
@@ -43,12 +40,26 @@
       margin: 0 $space;
     }
   }
-  #btn_cookie {
+  button {
     width: 100%;
+    height: 38px;
+    font-family: $font-1;
     font-size: $font-size-h5;
+    vertical-align: middle;
     @media (min-width: $bpoint-tab) {
-      width: 81px;
-      height: 30px;
+      margin: auto;
+      width: auto;
+    }
+    .x-symbol {
+      vertical-align: middle;
+      line-height: 1px;
+      padding: 0 0 0 8px;
+      font-weight: $fw-bold;
+      font-size: $font-size-h3;
     }
   }
+}
+.cookie-policy {
+  color: $color-4;
+  text-decoration: underline;
 }

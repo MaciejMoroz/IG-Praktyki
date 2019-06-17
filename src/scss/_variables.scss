@@ -17,7 +17,10 @@ $color-ok: green;
 
 // FONTS
 $base-unit: 20px;
-$font-1: Arial, Helvetica Neue, Helvetica, sans-serif;
+
+$font-1: "Mada", sans-serif;
+$font-2: "Homenaje", sans-serif;
+
 $font-size-base: $base-unit; //20 px
 $fw-normal: 400;
 $fw-semi: 600;
@@ -25,7 +28,7 @@ $fw-bold: 700;
 
 // FONT SIZE
 $font-size-body: $font-size-base; // 20
-$font-size-body2: $font-size-base * 0.75;
+$font-size-body2: $font-size-base * 0.75; // 15
 $font-size-h1: $font-size-base * 2.9; //58
 $font-size-h2: $font-size-base * 2.5; //50
 $font-size-h3: $font-size-base * 1.5; //30
@@ -43,5 +46,5 @@ $bpoint-tab: 768px;
 $bpoint-desk: 1024px;
 $bpoint-desklg: 1600px;
 
-$cont-max-width: $base-unit * 51.2;
-$cont-min-width: $base-unit * 16;
+$cont-max-width: $base-unit * 51.2; // 1024px
+$cont-min-width: $base-unit * 16; // 32px

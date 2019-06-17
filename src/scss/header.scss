@@ -14,7 +14,7 @@
       background-color: rgba(112, 112, 112, 0.9);
       height: 100vh;
       position: fixed;
-      span {
+      .nav-btn {
         display: block;
       }
     }
@@ -22,18 +22,28 @@
 }
 
 .hdr-nav {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
   font-size: $font-size-h5;
   padding-top: $space * 4;
   padding-bottom: $space;
   color: $color-2;
   font-weight: $fw-normal;
-  text-transform: uppercase;
+  @media (min-width: $bpoint-desk) {
+    display: inline-block;
+  }
 
-  span {
-    padding: $space * 0.5;
+  .nav-btn {
     display: none;
     transition: all 0.5s;
+    color: $color-2;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: $space * 0.5 $space;
+    display: inline-block;
+    a {
+      display: block;
+    }
     &:hover {
       color: $color-1;
       background-color: rgba(242, 242, 242, 0.5);
@@ -49,18 +59,23 @@
       margin: -2px;
       border-left: 1px solid rgba(255, 255, 255, 0.5);
     }
-    span {
-      cursor: pointer;
-      padding: $space * 0.5 $space;
-      display: inline-block;
-
-      a {
-        display: block;
-      }
-    }
     .hide-hdr {
       display: none;
       position: absolute;
+    }
+  }
+}
+.hdr-el {
+  margin: auto;
+  @media (min-width: $bpoint-desk) {
+    display: inline-block;
+    .highlight-nav {
+      transition: 0.5s;
+      position: absolute;
+      top: -$base-unit;
+      width: 100%;
+      height: 10px;
+      background-color: transparent;
     }
   }
 }
@@ -73,6 +88,14 @@
   @media (min-width: $bpoint-desk) {
     left: 0;
   }
+}
+.highlight-nav-img {
+  transition: 0.5s;
+  position: absolute;
+  top: -$base-unit;
+  width: 100%;
+  height: 10px;
+  background-color: transparent;
 }
 
 .hdr-menu {

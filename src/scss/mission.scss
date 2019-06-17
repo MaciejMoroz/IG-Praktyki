@@ -1,12 +1,15 @@
 .nav-anchor-mission {
+  position: absolute;
   padding-top: 100px;
   margin-top: -50px;
 }
 .mission {
-  // margin-top: $space;
   text-align: center;
   @media (max-width: $bpoint-tab) {
     margin-top: -$space;
+  }
+  h2 {
+    font-family: $font-2;
   }
   p {
     text-align: left;

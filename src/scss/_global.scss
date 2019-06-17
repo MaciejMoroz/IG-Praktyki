@@ -66,6 +66,10 @@ p {
   margin: 0.5 * $space 0;
 }
 input {
+  font-family: $font-1;
+  &::placeholder {
+    font-family: $font-1;
+  }
   border: none;
   background: none;
   padding: 0;
@@ -154,7 +158,6 @@ button {
   padding: 8px 15px;
   text-align: center;
   overflow: hidden;
-  z-index: 1;
   background-color: $color-4;
   border: 1px solid $color-7;
   color: $color-2;
@@ -235,6 +238,7 @@ button {
   color: $color-2;
 }
 .nav-anchor {
+  position: absolute;
   padding-top: 50px;
   margin-top: -50px;
 }

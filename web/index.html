@@ -20,19 +20,37 @@
   <div class="wrapper">
     <a href="#">
       <div class="hdr-logo">
-        <span></span>
+        <div id="nav-hero" class="highlight-nav-img  hide-mob"></div>
         <img src="../../img/ig-logo.png" alt="ig-logo" />
       </div>
     </a>
 
     <div class="hdr-nav">
-      <a href="#nav-mission"> <span>Mission</span></a>
+      <div class="hdr-el">
+        <a href="#nav-mission">
+          <div id="mission-bar" class="highlight-nav hide-mob"></div>
+          <span class="nav-btn">Mission</span>
+        </a>
+      </div>
 
-      <a href="#nav-clients"><span class="line">clients</span></a>
-
-      <a href="#nav-products"><span class="line">products</span></a>
-
-      <a href="#nav-contact"><span class="line">contact</span></a>
+      <div class="hdr-el">
+        <a href="#nav-clients"
+          ><div id="clients-bar" class="highlight-nav hide-mob"></div>
+          <span class="line nav-btn">clients</span>
+        </a>
+      </div>
+      <div class="hdr-el">
+        <a href="#nav-products"
+          ><div id="products-bar" class="highlight-nav hide-mob"></div>
+          <span class="line nav-btn">products</span></a
+        >
+      </div>
+      <div class="hdr-el">
+        <a href="#nav-contact"
+          ><div id="contact-bar" class="highlight-nav hide-mob"></div>
+          <span class="line nav-btn ">contact</span></a
+        >
+      </div>
     </div>
     <div class="hdr-menu" data-menu-btn>
       <span></span>
@@ -340,7 +358,7 @@
     </div>
   </div>
 </section>
-<sectiom class="component map">
+<sectiom id="nav-contact-map" class="component map">
   <div class="map-contener">
     <div class="map-content">
       <div class="map-text"></div>
@@ -488,7 +506,9 @@
       continue browsing, we consider you accept its use. You can switch the
       configuration or learn more <a href="#" class="cookie-policy">here</a>
     </p>
-    <button class="btn btn--animated" id="btn_cookie">CLOSE</button>
+    <button class="btn btn--animated" id="btn_cookie">
+      CLOSE<span class="x-symbol">&times</span>
+    </button>
   </div>
 </div>
 

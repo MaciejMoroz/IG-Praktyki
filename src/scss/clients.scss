@@ -10,11 +10,11 @@
   text-align: center;
 
   &-hdr {
+    font-family: $font-2;
     margin-top: $space;
     @media (min-width: $bpoint-desk) {
       margin-top: $space * 5;
       margin-bottom: $base-unit * 3;
-      margin-left: $space * 7;
     }
   }
 
@@ -24,8 +24,8 @@
     @media (min-width: $bpoint-desk) {
       margin-top: 0;
       margin-bottom: $base-unit * 3;
-      margin-left: $space * 3; // do poprawy
-      margin-right: $space * 2; // do poprawy
+      margin-left: $space * 3;
+      margin-right: $space * 2;
     }
     @media (min-width: $bpoint-desklg) {
       margin-top: 0;
@@ -41,6 +41,7 @@
       padding-left: $space/2;
       padding-right: $space;
       font-size: $space * 2;
+      cursor: default;
     }
   }
 }
@@ -55,14 +56,14 @@
   background-position: center center;
 }
 
-/* kontener dla wszystkich slajdów */
+// slider contener
 .slider-slides-cnt {
   height: $base-unit * 25;
   width: 100%;
   position: relative;
 }
 
-/* pojedynczy slide */
+// single slide
 .slider-slide {
   position: absolute;
 
@@ -74,7 +75,7 @@
   opacity: 0;
   z-index: 0;
 }
-/* slide aktywny */
+// active slide
 .slider-slide-active {
   z-index: 1;
 }
@@ -111,7 +112,7 @@
   }
 }
 
-/* animacja slajdów */
+// slide animation
 .slider-slide {
   opacity: 0;
   transition: 0.4s all;
@@ -140,7 +141,7 @@
   opacity: 1;
 }
 
-/* przyciski strzałek slajdu */
+// slider nav buttons
 .slider-button-prev,
 .slider-button-next {
   cursor: pointer;
@@ -181,7 +182,7 @@
   content: ">";
 }
 
-/* slider dots */
+// slider dots
 .slider-dots {
   z-index: 2;
   position: relative;

@@ -1,17 +1,19 @@
 .contact-hdr {
+  font-family: $font-2;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 
   button {
+    font-family: $font-2;
     height: 34px;
     span {
       padding-left: 5px;
     }
   }
 
-  @media (min-width: $bpoint-tab) {
+  @media (min-width: $bpoint-desk) {
     margin-left: -$space;
     margin-right: -$space;
     p {
@@ -57,7 +59,11 @@
   }
 }
 .submit-btn {
+  font-family: $font-2;
   text-align: center;
+  button {
+    font-family: $font-2;
+  }
   span {
     padding-left: 5px;
   }

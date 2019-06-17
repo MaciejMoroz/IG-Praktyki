@@ -1,20 +1,30 @@
+// const fixedMenu = require("./fixedMenu.js");
+
 const BODY = this.document.querySelector("body"),
   btn_menu = this.document.querySelector("[data-menu-btn]"),
   form_mod = this.document.querySelector(".contact"),
   form_el = form_mod.querySelector("form"),
   form_req = form_mod.querySelectorAll("[required]"),
   nav = document.getElementById("nav"),
-  cookie_bar = document.getElementById("cookie-bar"),
-  cookie_btn = document
-    .getElementById("btn_cookie")
-    .addEventListener("click", cookieAccepted);
+  cookie_bar = document.getElementById("cookie-bar");
+document.getElementById("btn_cookie").addEventListener("click", cookieAccepted);
 
-//fixed menu
+// window events
+window.onload = () => {
+  highlightCurrentBar();
+};
+//on scroll events
 window.onscroll = () => {
+  fixedMenu();
+  highlightCurrentBar();
+};
+
+// fixed menu
+let fixedMenu = () => {
   if (window.pageYOffset > 100) {
-    nav.style.paddingTop = "10px";
+    nav.style.paddingTop = "20px";
     nav.style.paddingBottom = "10px";
-    nav.style.height = "70px";
+    nav.style.height = "80px";
     if (window.innerWidth > 1024) {
       nav.style.height = "80px";
     }
@@ -54,7 +64,6 @@ form_el.onsubmit = function(event) {
 
   for (i = 0; i < form_req.length; i++) {
     if (form_req[i].checkValidity() != true) {
-      console.log(form_req[i]);
       isError = true;
     }
   }
@@ -71,7 +80,6 @@ form_el.onsubmit = function(event) {
           checkBox: document.getElementById("contact-checkbox").value
         };
         console.log(data);
-
         form_el.classList.remove("is-submitted");
         form_el.reset();
       }
@@ -88,3 +96,72 @@ function cookieAccepted() {
   cookie_bar.style.display = "none";
   console.log("cookie actepted");
 }
+
+// highlight nav
+
+let navBtns = [...document.getElementsByClassName("nav-btn")];
+let highlightBars = [...document.getElementsByClassName("highlight-nav")];
+
+highlightBars.map((bar, i) => {
+  bar.style.width = navBtns[i].clientWidth - 3 + "px";
+});
+let curentBar = "hero";
+
+let highlightCurrentBar = () => {
+  let heroBar = document.getElementById("nav-hero"),
+    missionNav = document.getElementById("nav-mission"),
+    missionBar = document.getElementById("mission-bar"),
+    clientsNav = document.getElementById("nav-clients"),
+    clientsBar = document.getElementById("clients-bar"),
+    productsNav = document.getElementById("nav-products"),
+    productsBar = document.getElementById("products-bar"),
+    contactsNav = document.getElementById("nav-contact"),
+    contactsNavMap = document.getElementById("nav-contact-map"),
+    contactBar = document.getElementById("contact-bar");
+
+  if (window.pageYOffset >= 0) {
+    curentBar = "hero";
+  }
+
+  if (window.pageYOffset >= missionNav.offsetTop) {
+    curentBar = "mission";
+  }
+  if (window.pageYOffset >= clientsNav.offsetTop) {
+    curentBar = "clients";
+  }
+  if (window.pageYOffset >= productsNav.offsetTop) {
+    curentBar = "products";
+  }
+  if (
+    window.pageYOffset >= contactsNav.offsetTop ||
+    window.pageYOffset >= contactsNavMap.offsetTop
+  ) {
+    curentBar = "contact";
+  }
+
+  if (curentBar == "hero") {
+    heroBar.style.background = "#62bf17";
+  } else {
+    heroBar.style.background = "transparent";
+  }
+  if (curentBar == "mission") {
+    missionBar.style.background = "#62bf17";
+  } else {
+    missionBar.style.background = "transparent";
+  }
+  if (curentBar == "clients") {
+    clientsBar.style.background = "#62bf17";
+  } else {
+    clientsBar.style.background = "transparent";
+  }
+  if (curentBar == "products") {
+    productsBar.style.background = "#62bf17";
+  } else {
+    productsBar.style.background = "transparent";
+  }
+  if (curentBar == "contact") {
+    contactBar.style.background = "#62bf17";
+  } else {
+    contactBar.style.background = "transparent";
+  }
+};
