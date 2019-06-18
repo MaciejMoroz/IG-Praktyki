@@ -12,6 +12,13 @@ document.getElementById("btn_cookie").addEventListener("click", cookieAccepted);
 // window events
 window.onload = () => {
   highlightCurrentBar();
+  // set highlight current nav menu bar
+  let navBtns = [...document.getElementsByClassName("nav-btn")];
+  let highlightBars = [...document.getElementsByClassName("highlight-nav")];
+
+  highlightBars.map((bar, i) => {
+    bar.style.width = navBtns[i].clientWidth - 3 + "px";
+  });
 };
 //on scroll events
 window.onscroll = () => {
@@ -99,12 +106,6 @@ function cookieAccepted() {
 
 // highlight nav
 
-let navBtns = [...document.getElementsByClassName("nav-btn")];
-let highlightBars = [...document.getElementsByClassName("highlight-nav")];
-
-highlightBars.map((bar, i) => {
-  bar.style.width = navBtns[i].clientWidth - 3 + "px";
-});
 let curentBar = "hero";
 
 let highlightCurrentBar = () => {
