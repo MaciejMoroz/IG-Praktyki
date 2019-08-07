@@ -14,14 +14,14 @@
       background-color: rgba(112, 112, 112, 0.9);
       height: 100vh;
       position: fixed;
-      .nav-btn {
+      .nav__btn {
         display: block;
       }
     }
   }
 }
 
-.hdr-nav {
+.nav {
   display: flex;
   flex-direction: column;
   font-size: $font-size-h5;
@@ -31,9 +31,35 @@
   font-weight: $fw-normal;
   @media (min-width: $bpoint-desk) {
     display: inline-block;
+    position: absolute;
+    padding-top: 0px;
+    left: $space * 7;
+    font-size: $font-size-h5;
+    .line {
+      margin: -2px;
+      border-left: 1px solid rgba(255, 255, 255, 0.5);
+    }
+    .hide-hdr {
+      display: none;
+      position: absolute;
+    }
+  }
+  &__el {
+    margin: auto;
+    @media (min-width: $bpoint-desk) {
+      display: inline-block;
+      .highlight-nav {
+        transition: 0.5s;
+        position: absolute;
+        top: -$base-unit;
+        width: 100%;
+        height: 10px;
+        background-color: transparent;
+      }
+    }
   }
 
-  .nav-btn {
+  &__btn {
     display: none;
     transition: all 0.5s;
     color: $color-2;
@@ -49,38 +75,9 @@
       background-color: rgba(242, 242, 242, 0.5);
     }
   }
-
-  @media (min-width: $bpoint-desk) {
-    position: absolute;
-    padding-top: 0px;
-    left: $space * 7;
-    font-size: $font-size-h5;
-    .line {
-      margin: -2px;
-      border-left: 1px solid rgba(255, 255, 255, 0.5);
-    }
-    .hide-hdr {
-      display: none;
-      position: absolute;
-    }
-  }
-}
-.hdr-el {
-  margin: auto;
-  @media (min-width: $bpoint-desk) {
-    display: inline-block;
-    .highlight-nav {
-      transition: 0.5s;
-      position: absolute;
-      top: -$base-unit;
-      width: 100%;
-      height: 10px;
-      background-color: transparent;
-    }
-  }
 }
 
-.hdr-logo {
+.hdr__logo {
   padding-top: $space * 0.25;
   position: absolute;
   left: $space;

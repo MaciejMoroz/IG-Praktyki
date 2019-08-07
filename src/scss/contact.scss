@@ -1,79 +1,81 @@
-.contact-hdr {
-  font-family: $font-2;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-
-  button {
+.contact {
+  &__hdr {
     font-family: $font-2;
-    height: 34px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &__btn {
+      font-family: $font-2;
+      height: 34px;
+      span {
+        padding-left: 5px;
+      }
+    }
+
+    @media (min-width: $bpoint-desk) {
+      margin-left: -$space;
+      margin-right: -$space;
+      p {
+        padding: 0 $space * 2;
+        padding-right: 0;
+      }
+    }
+  }
+
+  &__content {
+    @media (min-width: $bpoint-tab) {
+      p {
+        padding: 0 $space;
+        padding-right: 0;
+      }
+    }
+  }
+  &__el {
+    display: inline-block;
+    span {
+      margin: 2px 0;
+      text-align: right;
+      font-size: $font-size-h6;
+    }
+  }
+
+  &__form {
+    @media (min-width: $bpoint-tab) {
+      padding: 0 $space;
+      padding-right: 0;
+      label {
+        font-size: $font-size-h3;
+      }
+    }
+  }
+
+  &__form__el {
+    border-bottom: 1px solid black;
+    font-size: $font-size-h4;
+    width: 240px;
+    padding: 2px 5px;
+    &::placeholder {
+      padding: 5px;
+      font-size: $font-size-h5;
+    }
+  }
+
+  &__checkbox {
+    margin: $space 0;
+    label {
+      font-size: 18px;
+    }
+  }
+  &__submit-btn {
+    font-family: $font-2;
+    text-align: center;
+    button {
+      font-family: $font-2;
+    }
     span {
       padding-left: 5px;
     }
-  }
-
-  @media (min-width: $bpoint-desk) {
-    margin-left: -$space;
-    margin-right: -$space;
-    p {
-      padding: 0 $space * 2;
-      padding-right: 0;
-    }
-  }
-}
-.contact-content {
-  @media (min-width: $bpoint-tab) {
-    p {
-      padding: 0 $space;
-      padding-right: 0;
-    }
-  }
-}
-
-.contact-form {
-  @media (min-width: $bpoint-tab) {
-    padding: 0 $space;
-    padding-right: 0;
-    label {
-      font-size: $font-size-h3;
-    }
-  }
-}
-
-.form-el {
-  border-bottom: 1px solid black;
-  font-size: $font-size-h4;
-  width: 240px;
-  padding: 2px 5px;
-  &::placeholder {
-    padding: 5px;
-    font-size: $font-size-h5;
-  }
-}
-
-.checkbox-contact {
-  margin: $space 0;
-  label {
-    font-size: 18px;
-  }
-}
-.submit-btn {
-  font-family: $font-2;
-  text-align: center;
-  button {
-    font-family: $font-2;
-  }
-  span {
-    padding-left: 5px;
-  }
-}
-
-.contact-el {
-  display: inline-block;
-  span {
-    margin: 2px 0;
-    text-align: right;
-    font-size: $font-size-h6;
   }
 }

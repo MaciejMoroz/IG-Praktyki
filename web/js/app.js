@@ -13,7 +13,7 @@ document.getElementById("btn_cookie").addEventListener("click", cookieAccepted);
 window.onload = () => {
   highlightCurrentBar();
   // set highlight current nav menu bar
-  let navBtns = [...document.getElementsByClassName("nav-btn")];
+  let navBtns = [...document.getElementsByClassName("nav__btn")];
   let highlightBars = [...document.getElementsByClassName("highlight-nav")];
 
   highlightBars.map((bar, i) => {
@@ -63,7 +63,7 @@ btn_menu.onclick = () => {
 };
 
 //form submit
-form_el.onsubmit = function(event) {
+form_el.onsubmit = function (event) {
   event.preventDefault();
 
   form_el.classList.add("is-submitted");
@@ -77,7 +77,7 @@ form_el.onsubmit = function(event) {
 
   if (!isError) {
     let xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
+    xhttp.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
         let data = {
           firstName: document.getElementById("firstName").value,

@@ -9,7 +9,7 @@
   color: $color-1;
   text-align: center;
 
-  &-hdr {
+  &__hdr {
     font-family: $font-2;
     margin-top: $space;
     @media (min-width: $bpoint-desk) {
